@@ -1,0 +1,345 @@
+        @media (max-width: 600px) {
+            footer {
+                padding: 10px;
+            }
+        }
+
+        .screen {
+            display: none;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            width: 95%;
+
+        }
+
+        .body-background {
+            background-color: #cce6ff;
+        }
+
+        .left-align {
+            text-align: left;
+        }
+
+        .active {
+            display: block;
+            padding-bottom: 60px;
+
+        }
+
+        .screen-title {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            color: #334d4d;
+            background-color: #f0f0f0;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            text-align: left;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            flex: 2;
+            align-items: stretch;
+            width: 95%;
+
+        }
+
+        .main-content {
+            height: calc(100vh - 100px);
+            display: flex;
+            overflow-y: auto;
+        }
+
+        /* CSS für das Formular */
+        .custom-form {
+            padding: 250px;
+            height: auto;
+            gap: 10px;
+        }
+
+        #wosearch {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+        }
+
+        /* CSS für den Formular-Button */
+        #wosearch input[type="submit"] {
+            font-size: 18px;
+            height: 30px;
+            width: 60px;
+            border-radius: 10px;
+            background-color: #95f599;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border: none;
+
+        }
+
+        #wosearch input[type="submit"]:hover {
+            background-color: #89e086;
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+
+        }
+
+        #wosearch input[type="submit"]:active {
+            background-color: #7ec584;
+            box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 7px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+        }
+
+        /* CSS für das Formular-Eingabefeld */
+        #wosearch input[type="text"] {
+            font-size: 20px;
+            height: 30px;
+            width: 120px;
+            background-color: #f2f3e1;
+            border-radius: 5px;
+            border: none;
+
+        }
+
+        /* CSS für das Package-Label */
+        .package-style {
+            background-color: #88d5ec;
+            color: rgb(20, 19, 19);
+            padding: 10px 10px;
+            top: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+
+        }
+
+        /* CSS für die Buttons */
+        .button-style {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            top: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .button-style:hover {
+            background-color: #45a049;
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+        }
+
+        .button-style:active {
+            background-color: #357a38;
+            box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 7px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+        }
+
+        .inaktiverButton {
+            background-color: lightgray;
+            color: rgb(151, 151, 151);
+            padding: 15px 32px;
+            top: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: not-allowed;
+            pointer-events: none;
+            border-radius: 10px;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+            display: none;
+        }
+
+        .inaktiverButtonStart {
+            background-color: lightgray;
+            color: rgb(151, 151, 151);
+            padding: 15px 32px;
+            top: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: not-allowed;
+            pointer-events: none;
+            border-radius: 10px;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        /* CSS für das Home-Button */
+        #home {
+            position: fixed;
+            right: 80px;
+            background-color: #537dcc;
+            color: white;
+            padding: 15px 32px;
+            bottom: 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+        }
+
+        #home:hover {
+            background-color: #4870b9;
+            /* Hintergrundfarbe beim Überfahren */
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+        }
+
+        #home:active {
+            background-color: #365da5;
+            box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 7px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+        }
+
+        /* CSS für das Back-Button */
+        #backButton {
+            position: fixed;
+            background-color: #33cccc;
+            color: rgb(255, 255, 255);
+            padding: 15px 32px;
+            font-size: 16px;
+            border: none;
+            bottom: 20px;
+            left: 80px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+        }
+
+        #backButton:hover {
+            background-color: #2eb8b8;
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+        }
+
+        #backButton:active {
+            background-color: #28a3a3;
+            box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 7px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        /* CSS für die Tabelle */
+        .table {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            flex: 2;
+            align-items: stretch;
+        }
+
+        tr {
+            display: flex;
+        }
+
+        td {
+            flex: 1;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        /* CSS für die Menü mit Attributen*/
+        .menu-row {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        .menu-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .attributs-list {
+            display: inline-block;
+            top: 10px;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 10px;
+            background-color: #feffbd;
+            border: 1px solid #bcbd8b;
+            margin-right: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        /* CSS für die Items*/
+        .item-style {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            top: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .inaktiverItem {
+            background-color: lightgray;
+            color: rgb(95, 95, 95);
+            padding: 15px 32px;
+            top: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: not-allowed;
+            pointer-events: none;
+            border-radius: 10px;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+            display: none;
+        }
+
+        /* CSS für das Kommentar-Feld*/
+        .custom-textarea {
+            top: 10px;
+            padding: 15px 32px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #e1ecdc;
+            resize: none;
+        }
+
+        /* CSS für das Footer*/
+        .footer-buttons {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        footer {
+            color: white;
+            padding: 50px;
+            text-align: left;
+            margin-left: 160px;
+        }
+
+        footer p {
+            margin: 0;
+        }

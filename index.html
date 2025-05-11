@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+ * Copyright (c) 2024 ad 
+ * Alle Rechte vorbehalten.
+ -->
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mock Up, DigiBoard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+
+<body class="body-background">
+
+    <div class="main-content">
+
+
+        <div id="start" class="screen active">
+            <form id="wosearch" class="custom-form">
+                <label for="wos">Please input WO Number:</label>
+                <input type="text" id="wos" name="woSearch" pattern="^\d{6}$" required placeholder="e.g. 184999"
+                    title="Only a 6-digit WO Number is allowed.">
+                <input type="submit" value="Go!">
+            </form>
+        </div>
+
+        <div id="board0" class="screen">
+            <div class="screen-title"><br>Placeholder</div>
+
+            View Job Cards with open Items: <br><br>
+            <button data-id="From Sections"
+                onclick="saveButtonId(this.dataset.id); navigateToScreen('section-progress')"
+                class="button-style">According to
+                <b>Aircrafts Sections</b></button>
+            <button data-id="From Qualifications"
+                onclick="saveButtonId(this.dataset.id); navigateToScreen('qualification-section')"
+                class="button-style">According to
+                <b>Staff Qualifications</b></button>
+            <button data-id="Packages: " onclick="saveButtonId(this.dataset.id); navigateToScreen('packages-jobcards')"
+                class="button-style">According to <b>Work Packages</b></button>
+            <br>
+            <br>
+            Tests:<br><br>
+            <button data-id="Tests, Inside" onclick="saveButtonId(this.dataset.id); navigateToScreen('jobcards')"
+                class="button-style">Tests, <b>Inside</b></button>
+            <button data-id="Tests, Outside" onclick="saveButtonId(this.dataset.id); navigateToScreen('jobcards')"
+                class="button-style">Tests, <b>Outside</b></button>
+            <br><br>
+            If Items have attributes that are not fully defined yet:
+            <br><br>
+            <button data-id="---" onclick="saveButtonId(this.dataset.id); navigateToScreen('jobcards')"
+                class="button-style">
+                Items to be assigned
+            </button>
+        </div>
+
+        <div id="progress-jobcards" class="screen" data-name="Progress">
+
+            <div class="screen-title"><br>Placeholder</div>
+
+            <button data-id="ToDo" onclick="saveButtonId(this.dataset.id); navigateToScreen('jobcards')"
+                class="button-style">To
+                Do</button>
+            <button data-id="Next"
+                onclick="saveButtonId(this.dataset.id); saveButtonId(this.dataset.id); navigateToScreen('jobcards')"
+                class="button-style">Next</button>
+            <button data-id="InProgress" onclick="saveButtonId(this.dataset.id); navigateToScreen('jobcards')"
+                class="button-style">In
+                Progress</button>
+            <button data-id="ForInspection" onclick="saveButtonId(this.dataset.id); navigateToScreen('jobcards')"
+                class="button-style">For
+                Inspection</button>
+
+            <!-- 
+            <button data-id="Ready" onclick="saveButtonId(this.dataset.id); navigateToScreen('jobcards')"
+                class="button-style">Ready</button> -->
+            <br>
+            <br>
+        </div>
+
+
+
+        <div id="section-progress" class="screen" data-name="Section">
+            <div class="screen-title"><br>Placeholder</div>
+            <button data-id="NF" onclick="saveButtonId(this.dataset.id); navigateToScreen('progress-jobcards')"
+                class="button-style">NF</button>
+            <button data-id="FF" onclick="saveButtonId(this.dataset.id); navigateToScreen('progress-jobcards')"
+                class="button-style">FF</button>
+            <button data-id="CF" onclick="saveButtonId(this.dataset.id); navigateToScreen('progress-jobcards')"
+                class="button-style">CF</button>
+            <button data-id="AF" onclick="saveButtonId(this.dataset.id); navigateToScreen('progress-jobcards')"
+                class="button-style">AF</button>
+            <button data-id="WI" onclick="saveButtonId(this.dataset.id); navigateToScreen('progress-jobcards')"
+                class="button-style">WI</button>
+            <button data-id="STA" onclick="saveButtonId(this.dataset.id); navigateToScreen('progress-jobcards')"
+                class="button-style">STA</button>
+            <button data-id="WW" onclick="saveButtonId(this.dataset.id); navigateToScreen('progress-jobcards')"
+                class="button-style">WW</button>
+            <button data-id="LG" onclick="saveButtonId(this.dataset.id); navigateToScreen('progress-jobcards')"
+                class="button-style">LG</button>
+            <button data-id="TAI" onclick="saveButtonId(this.dataset.id); navigateToScreen('progress-jobcards')"
+                class="button-style">TAI</button>
+            <button data-id="ENG" onclick="saveButtonId(this.dataset.id); navigateToScreen('progress-jobcards')"
+                class="button-style">ENG</button>
+            <button data-id="AT" onclick="saveButtonId(this.dataset.id); navigateToScreen('progress-jobcards')"
+                class="button-style">AT</button>
+            <button data-id="INTER" onclick="saveButtonId(this.dataset.id); navigateToScreen('progress-jobcards')"
+                class="button-style">INT</button>
+            <button data-id="CAB" onclick="saveButtonId(this.dataset.id); navigateToScreen('progress-jobcards')"
+                class="button-style">CAB</button>
+            <button data-id="TEST" onclick="saveButtonId(this.dataset.id); navigateToScreen('progress-jobcards')"
+                class="button-style">TEST</button>
+        </div>
+
+        <div id="qualification-section" class="screen" data-name="Qualification">
+            <div class="screen-title"><br>Placeholder</div>
+            <button data-id="MFB" onclick="saveButtonId(this.dataset.id); navigateToScreen('section-progress')"
+                class="button-style">MFB</button>
+            <button data-id="AVI" onclick="saveButtonId(this.dataset.id); navigateToScreen('section-progress')"
+                class="button-style">AVI</button>
+            <button data-id="MECH" onclick="saveButtonId(this.dataset.id); navigateToScreen('section-progress')"
+                class="button-style">MECH</button>
+            <button data-id="INT" onclick="saveButtonId(this.dataset.id); navigateToScreen('section-progress')"
+                class="button-style">INT</button>
+            <button data-id="PAINT" onclick="saveButtonId(this.dataset.id); navigateToScreen('section-progress')"
+                class="button-style">PAINT</button>
+        </div>
+
+        <div id="packages-jobcards" class="screen">
+            <div class="screen-title"><br>Placeholder</div>
+            <button data-id="AVI-001" onclick="saveButtonId(this.dataset.id); navigateToScreen('jobcards')"
+                class="button-style">AVI-001</button>
+            <button data-id="AVI-002" onclick="saveButtonId(this.dataset.id); navigateToScreen('jobcards')"
+                class="button-style">AVI-002</button>
+            <button data-id="MECH-001" onclick="saveButtonId(this.dataset.id); navigateToScreen('jobcards')"
+                class="button-style">MECH-001</button>
+            <button data-id="MECH-002" onclick="saveButtonId(this.dataset.id); navigateToScreen('jobcards')"
+                class="button-style">MECH-002</button>
+            <button data-id="MECH-003" onclick="saveButtonId(this.dataset.id); navigateToScreen('jobcards')"
+                class="button-style">MECH-003</button>
+        </div>
+
+        <div id="qualification-jobcards" class="screen">
+            <div class="screen-title"><br>Placeholder</div>
+            <button data-id="MFB" onclick="saveButtonId(this.dataset.id); navigateToScreen('jobcards')"
+                class="button-style">MFB</button>
+            <button data-id="AVI" onclick="saveButtonId(this.dataset.id); navigateToScreen('jobcards')"
+                class="button-style">AVI</button>
+            <button data-id="MECH" onclick="saveButtonId(this.dataset.id); navigateToScreen('jobcards')"
+                class="button-style">MECH</button>
+            <button data-id="INT" onclick="saveButtonId(this.dataset.id); navigateToScreen('jobcards')"
+                class="button-style">INT</button>
+            <button data-id="PAINT" onclick="saveButtonId(this.dataset.id); navigateToScreen('jobcards')"
+                class="button-style">PAINT</button>
+        </div>
+
+
+
+        <div id="jobcards" class="screen">
+            <div class="screen-title"><br>Placeholder</div>
+            <button data-id="JC080" data-JC
+                onclick="saveButtonId(this.dataset.id); navigateToScreen('items' + this.dataset.id)"
+                class="button-style left-align">JC .080 <br> 60 MONTH INSPECTION TASKS
+            </button> <br>
+            <button data-id="JC102" data-JC
+                onclick="saveButtonId(this.dataset.id); navigateToScreen('items' + this.dataset.id)"
+                class="button-style left-align">JC .102 <br>120 MONTH INSPECTION TASKS
+            </button> <br>
+            <button data-id="JC118" data-JC
+                onclick="saveButtonId(this.dataset.id); navigateToScreen('items' + this.dataset.id)"
+                class="button-style left-align">JC .118 <br>1500 HOUR INSPECTION TASKS
+            </button>
+        </div>
+
+        <div id="itemsJC080" data-items class="screen">
+            <div class="screen-title"><br>Placeholder</div>
+
+            <div class="table">
+
+                <div class="row">
+                    <div style="text-align: left; width: 100%; flex: 2" id="item1.10" data-Item data-JC="JC080"
+                        data-board="Ready" data-section="NF" data-qualification="MFB" data-lineitemstatus="OPEN"
+                        data-test="Test" data-package="MECH-001" class="item-style">
+                        Line Item .080.10 <br>
+                        REMOVE R/H INBOARD MAIN WHEEL AS PER BD700 AMM TASK 32-41-01-000-801 TIRE P/N OFF: TIRE S/N OFF:
+                        <div class="menu-container">
+                            <div data-boardPlaceholder></div>
+                            <div data-sectionPlaceholder></div>
+                            <div data-qualificationPlaceholder></div>
+                        </div>
+                    </div>
+                    <div data-packageName="MECH-001" style="text-align: left; width: 5%;" class="package-style">MECH-001
+                    </div>
+                    <textarea name="Comment" placeholder="Here´s your comment:"
+                        style="text-align: left; width: 100%; flex: 1" class="custom-textarea" rows="4"
+                        cols="50">TEST ITEM FOR READY STATUS</textarea>
+                </div>
+
+
+                <div class="row">
+                    <div style="text-align: left; width: 100%; flex: 2" id="item1.20" data-Item data-JC="JC080"
+                        data-board="---" data-section="NF" data-qualification="MFB" data-lineitemstatus="OPEN"
+                        data-test="No" data-package="-" class="item-style">
+                        Line Item .080.20 <br>
+                        INSTALL L/H NOSE WHEEL AS PER BD700 AMM TASK 32-42-01-400-801
+                        <div class="menu-container">
+                            <div data-boardPlaceholder></div>
+                            <div data-sectionPlaceholder></div>
+                            <div data-qualificationPlaceholder></div>
+                        </div>
+                    </div>
+                    <div data-packageName="-" style="text-align: left; width: 5%;" class="package-style">-</div>
+                    <textarea name="Comment" placeholder="Here´s your comment:"
+                        style="text-align: left; width: 100%; flex: 1" class="custom-textarea" rows="4"
+                        cols="50">TEST ITEM FOR NON-DEFIENED ITEM</textarea>
+                </div>
+
+                <div class="row">
+                    <div style="text-align: left; width: 100%; flex: 2" id="item1.30" data-Item data-JC="JC080"
+                        data-board="ToDo" data-section="NF" data-qualification="MFB" data-lineitemstatus="OPEN"
+                        data-test="Test" data-package="MECH-001" class="item-style">
+                        Line Item .080.30 <br>
+                        INTERIOR - FWD CAB - SEAT RH 1 - FLOORTRACKING STUCKY, DOES NOT TRACK FWD. PLS PERFORM T/S AND
+                        ADJUSTMENT.
+                        <div class="menu-container">
+                            <div data-boardPlaceholder></div>
+                            <div data-sectionPlaceholder></div>
+                            <div data-qualificationPlaceholder></div>
+                        </div>
+                    </div>
+                    <div data-packageName="MECH-001" style="text-align: left; width: 5%;" class="package-style">MECH-001
+                    </div>
+                    <textarea name="Comment" placeholder="Here´s your comment:"
+                        style="text-align: left; width: 100%; flex: 1" class="custom-textarea" rows="4"
+                        cols="50">Part ist bestellt</textarea>
+                </div>
+
+                <div class="row">
+                    <div style="text-align: left; width: 100%; flex: 2" id="item1.40" data-Item data-JC="JC080"
+                        data-board="ToDo" data-section="NF" data-qualification="MFB" data-lineitemstatus="OPEN"
+                        data-test="Test" data-package="MECH-001" class="item-style">
+                        Line Item .080.40 <br>
+                        FORWARD FUSELAGE - AVIONIC BAY DOOR GASKET IS WORN AND IS GETTING LOOSE - NEED TO BE REPLACED.
+                        <div class="menu-container">
+                            <div data-boardPlaceholder></div>
+                            <div data-sectionPlaceholder></div>
+                            <div data-qualificationPlaceholder></div>
+                        </div>
+                    </div>
+                    <div data-packageName="MECH-001" style="text-align: left; width: 5%;" class="package-style">MECH-001
+                    </div>
+                    <textarea name="Comment" placeholder="Here´s your comment:"
+                        style="text-align: left; width: 100%; flex: 1" class="custom-textarea" rows="4"
+                        cols="50"></textarea>
+                </div>
+
+                <div class="row">
+                    <div style="text-align: left; width: 100%; flex: 2" id="item1.50" data-Item data-JC="JC080"
+                        data-board="InProgress" data-section="NF" data-qualification="MFB" data-lineitemstatus="OPEN"
+                        data-test="Test" data-package="MECH-001" class="item-style">
+                        Line Item .080.50 <br>
+                        INTERIOR - BAGGAGE TOP HEADLINER VELCRO TAPE TORN OFF
+                        <div class="menu-container">
+                            <div data-boardPlaceholder></div>
+                            <div data-sectionPlaceholder></div>
+                            <div data-qualificationPlaceholder></div>
+                        </div>
+                    </div>
+                    <div data-packageName="MECH-001" style="text-align: left; width: 5%;" class="package-style">MECH-001
+                    </div>
+                    <textarea name="Comment" placeholder="Here´s your comment:"
+                        style="text-align: left; width: 100%; flex: 1" class="custom-textarea" rows="4"
+                        cols="50">Part ist bestellt</textarea>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="itemsJC102" data-items class="screen">
+            <div class="screen-title"><br>Placeholder</div>
+
+            <div class="row">
+                <div style="text-align: left; width: 100%; flex: 2" id="item2.10" data-Item data-JC="JC102"
+                    data-board="ToDo" data-section="NF" data-qualification="---" data-lineitemstatus="OPEN"
+                    data-test="Test" data-package="MECH-001" class="item-style">
+                    Line Item .102.10 <br>
+                    REMOVAL OF NECESSARY ACCESS PANELS
+                    <div class="menu-container">
+                        <div data-boardPlaceholder></div>
+                        <div data-sectionPlaceholder></div>
+                        <div data-qualificationPlaceholder></div>
+                    </div>
+                </div>
+                <div data-packageName="MECH-001" style="text-align: left; width: 5%;" class="package-style">MECH-001
+                </div>
+                <textarea name="Comment" placeholder="Here´s your comment:"
+                    style="text-align: left; width: 100%; flex: 1" class="custom-textarea" rows="4"
+                    cols="50">TEST ITEM FOR NON-DEFIENED ITEM</textarea>
+            </div>
+
+            <div class="row">
+                <div style="text-align: left; width: 100%; flex: 2" id="item2.20" data-Item data-JC="JC102"
+                    data-board="ToDo" data-section="CF" data-qualification="MFB" data-lineitemstatus="OPEN"
+                    data-test="Test" data-package="MECH-001" class="item-style">
+                    Line Item .102.20 <br>
+                    REMOVAL OF NECESSARY ACCESS PANELS
+                    <div class="menu-container">
+                        <div data-boardPlaceholder></div>
+                        <div data-sectionPlaceholder></div>
+                        <div data-qualificationPlaceholder></div>
+                    </div>
+                </div>
+                <div data-packageName="MECH-001" style="text-align: left; width: 5%;" class="package-style">MECH-001
+                </div>
+                <textarea name="Comment" placeholder="Here´s your comment:"
+                    style="text-align: left; width: 100%; flex: 1" class="custom-textarea" rows="4"
+                    cols="50">Part ist bestellt</textarea>
+            </div>
+
+            <div class="row">
+                <div style="text-align: left; width: 100%; flex: 2" id="item2.30" data-Item data-JC="JC102"
+                    data-board="ToDo" data-section="NF" data-qualification="AVI" data-lineitemstatus="OPEN"
+                    data-test="Test" data-package="MECH-001" class="item-style">
+                    Line Item .102.30 <br>
+                    OPERATIONAL TEST OF THE DISCHARGE CHECK VALVES
+                    <div class="menu-container">
+                        <div data-boardPlaceholder></div>
+                        <div data-sectionPlaceholder></div>
+                        <div data-qualificationPlaceholder></div>
+                    </div>
+                </div>
+                <div data-packageName="MECH-001" style="text-align: left; width: 5%;" class="package-style">MECH-001
+                </div>
+                <textarea name="Comment" placeholder="Here´s your comment:"
+                    style="text-align: left; width: 100%; flex: 1" class="custom-textarea" rows="4"
+                    cols="50">Part ist bestellt</textarea>
+            </div>
+
+            <div class="row">
+                <div style="text-align: left; width: 100%; flex: 2" id="item2.40" data-Item data-JC="JC102"
+                    data-board="Tests, Outside" data-section="NF" data-qualification="MFB" data-lineitemstatus="CLOSED"
+                    data-test="Test" data-package="MECH-001" class="item-style">
+                    Line Item .102.40 <br>
+                    LUBRICATION OF THE SLAT ROLLERS
+                    <div class="menu-container">
+                        <div data-boardPlaceholder></div>
+                        <div data-sectionPlaceholder></div>
+                        <div data-qualificationPlaceholder></div>
+                    </div>
+                </div>
+                <div data-packageName="MECH-001" style="text-align: left; width: 5%;" class="package-style">MECH-001
+                </div>
+                <textarea name="Comment" placeholder="Here´s your comment:"
+                    style="text-align: left; width: 100%; flex: 1" class="custom-textarea" rows="4"
+                    cols="50">TEST ITEM FOR TESTS OUTSIDE</textarea>
+            </div>
+
+        </div>
+
+        <div id="itemsJC118" data-items class="screen">
+            <div class="screen-title"><br>Placeholder</div>
+
+            <div class="table">
+                <div class="row">
+                    <div style="text-align: left; width: 100%; flex: 2" id="item3.10" data-Item data-JC="JC118"
+                        data-board="Next" data-section="FF" data-qualification="MFB" data-lineitemstatus="CLOSED"
+                        data-test="Test" data-package="MECH-003" class="item-style">
+                        Line Item .118.10 <br>
+                        GENERAL VISUAL INSPECTION OF THE AFT FUSELAGE - EXTERNAL
+                        <div class="menu-container">
+                            <div data-boardPlaceholder></div>
+                            <div data-sectionPlaceholder></div>
+                            <div data-qualificationPlaceholder></div>
+                        </div>
+                    </div>
+                    <div data-packageName="MECH-003" style="text-align: left; width: 5%;" class="package-style">MECH-003
+                    </div>
+                    <textarea name="Comment" placeholder="Here´s your comment:"
+                        style="text-align: left; width: 100%; flex: 1" class="custom-textarea" rows="4"
+                        cols="50">Part ist bestellt</textarea>
+                </div>
+
+                <div class="row">
+                    <div style="text-align: left; width: 100%; flex: 2" id="item3.20" data-Item data-JC="JC118"
+                        data-board="ToDo" data-section="NF" data-qualification="MFB" data-lineitemstatus="OPEN"
+                        data-test="Test" data-package="-" class="item-style">
+                        Line Item .118.20 <br>
+                        GENERAL VISUAL INSPECTION OF THE REAR SPAR OF THE HORIZONTAL STABILIZER - EXTERNAL RH
+                        <div class="menu-container">
+                            <div data-boardPlaceholder></div>
+                            <div data-sectionPlaceholder></div>
+                            <div data-qualificationPlaceholder></div>
+                        </div>
+                    </div>
+                    <div data-packageName="-" style="text-align: left; width: 5%;" class="package-style">-
+                    </div>
+                    <textarea name="Comment" placeholder="Here´s your comment:"
+                        style="text-align: left; width: 100%; flex: 1" class="custom-textarea" rows="4"
+                        cols="50">Part ist bestellt</textarea>
+                </div>
+
+                <div class="row">
+                    <div style="text-align: left; width: 100%; flex: 2" id="item3.30" data-Item data-JC="JC118"
+                        data-board="Tests, Inside" data-section="NF" data-qualification="MFB"
+                        data-lineitemstatus="CLOSED" data-test="Test" data-package="AVI-001" class="item-style">
+                        Line Item .118.30 <br>
+                        SPECIAL DETAILED INSPECTION OF THE INBOARD-FLAP INTERNAL RIBS
+                        <div class="menu-container">
+                            <div data-boardPlaceholder></div>
+                            <div data-sectionPlaceholder></div>
+                            <div data-qualificationPlaceholder></div>
+                        </div>
+                    </div>
+                    <div data-packageName="AVI-001" style="text-align: left; width: 5%;" class="package-style">AVI-001
+                    </div>
+                    <textarea name="Comment" placeholder="Here´s your comment:"
+                        style="text-align: left; width: 100%; flex: 1" class="custom-textarea" rows="4"
+                        cols="50">TEST ITEM FOR TESTS INSIDE</textarea>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Externe Elemente, hier für Attributen Dropdown Menü, die in die Tabellen eingefügt werden soll -->
+        <div id="dataBoardMenu" style="display: block;">
+            <select name="BoardMenu" data-boardMenu class="attributs-list" title="Board Menu">
+                <option value="---">???</option>
+                <option value="ToDo">ToDo</option>
+                <option value="Next">Next</option>
+                <option value="InProgress">In Progress</option>
+                <option value="ForInspection">For Inspection</option>
+                <option value="Tests, Inside">Test, Inside</option>
+                <option value="Tests, Outside">Test, Outside</option>
+                <option value="Ready">Ready</option>
+            </select>
+        </div>
+
+        <div id="dataSectionMenu" style="display: block;">
+            <select name="SectionMenu" data-sectionMenu class="attributs-list" title="Section Menu">
+                <option value="---">???</option>
+                <option value="NF">NF</option>
+                <option value="FF">FF</option>
+                <option value="CF">CF</option>
+                <option value="AF">AF</option>
+                <option value="WI">WI</option>
+                <option value="STA">STA</option>
+                <option value="WW">WW</option>
+                <option value="LG">LG</option>
+                <option value="TAI">TAI</option>
+                <option value="ENG">ENG</option>
+                <option value="AT">AT</option>
+                <option value="INTER">INT</option>
+                <option value="CAB">CAB</option>
+                <option value="TEST">TEST</option>
+            </select>
+        </div>
+
+        <div id="dataQualificationMenu" style="display: block;">
+            <select name="QualificationMenu" data-qualificationMenu class="attributs-list" title="Qualification Menu">
+                <option value="---">???</option>
+                <option value="MFB">MFB</option>
+                <option value="AVI">AVI</option>
+                <option value="MECH">MECH</option>
+                <option value="INT">INT</option>
+                <option value="PAINT">PAINT</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="footer-buttons">
+
+        <!-- Button "Zurück" wird auf jeder Seite als untersten Element angezeigt -->
+        <button id="backButton" onclick="saveButtonId(this.id); backButtonAction()" style="display: none;">Back</button>
+
+        <!-- Button "Home" wird auf jeder Seite als untersten Element angezeigt -->
+        <button id="home" onclick="navigateToScreen('board0')">Board</button>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 PW, AD. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <!-- Hier werden alle zusätliche Elemente für DOM generiert und interne Logik aufgerufen  -->
+    <script src="script.js"></script>
+
+    <!-- Hier wird ein Befehl zum Aufrufen vom "Startbildschirm" abgegeben -->
+    <script>
+        window.onload = function () {
+            document.getElementById('wos').focus();
+            // insertExternalMenu();
+            navigateToScreen('start'); // Aufruf des Bildschirmes beim Starten
+            document.querySelectorAll('[data-Item]').forEach(function (itemElement) {
+                addListenerToMenu(itemElement);
+
+            });
+        };
+    </script>
+</body>
+
+</html>
