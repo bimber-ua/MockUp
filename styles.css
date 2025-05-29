@@ -41,6 +41,8 @@
             align-items: stretch;
             width: 95%;
 
+            
+
         }
 
         .main-content {
@@ -113,7 +115,7 @@
 
         /* CSS für die Buttons */
         .button-style {
-            background-color: #4CAF50;
+            background-color: #4CAF50; /* Standard Grün */
             color: white;
             padding: 15px 32px;
             top: 10px;
@@ -137,6 +139,43 @@
             box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 7px 0 rgba(0, 0, 0, 0.19);
             cursor: pointer;
         }
+
+        /* Spezieller Stil für den "View Ready Items" Button */
+        #viewReadyItemsButton {
+            background-color: #007bff; /* Orange als Beispiel */
+        }
+
+        #viewReadyItemsButton:hover {
+            background-color: #0264ce;
+        }
+
+        #viewReadyItemsButton:active {
+            background-color: #014996;
+        }
+
+        /* Spezieller Stil für Buttons im "Ready Items" Pfad (z.B. JobCard Buttons) */
+        .button-style-ready-path {
+            background-color: #007bff; /* Blau, passend zu item-style-ready */
+            color: white;
+            padding: 15px 32px;
+            top: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            font-size: 16px;
+            border: none; /* Behält die meisten .button-style Eigenschaften, aber überschreibt Farbe */
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .button-style-ready-path:hover {
+            background-color: #0069d9; /* Dunkleres Blau für Hover */
+        }
+
+        .button-style-ready-path:active {
+            background-color: #0056b3; /* Noch dunkleres Blau für Active */
+        }
+
 
         .inaktiverButton {
             background-color: lightgray;
@@ -274,6 +313,11 @@
             cursor: pointer;
             color: #333;
         }
+         .attributs-list:disabled, .attributs-list.disabled-menu {
+            background-color: #e0e0e0; /* Helleres Grau für deaktivierte Menüs */
+            color: #757575;
+            border-color: #c0c0c0;
+        }
 
         /* CSS für die Items*/
         .item-style {
@@ -281,7 +325,7 @@
             justify-content: space-between;
             flex-direction: column;
             align-items: flex-start;
-            background-color: #4CAF50;
+            background-color: #4CAF50; /* Standard Grün */
             color: white;
             padding: 15px 32px;
             top: 10px;
@@ -291,6 +335,24 @@
             border: none;
             border-radius: 10px;
         }
+
+        /* Spezieller Stil für "Ready" Items */
+        .item-style-ready {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: #007bff; /* Blau als Beispiel für Ready-Status */
+            color: white;
+            padding: 15px 32px;
+            top: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            font-size: 16px;
+            border: 2px solid #0056b3; /* Ein kleiner Rand zur weiteren Hervorhebung */
+            border-radius: 10px;
+        }
+
 
         .inaktiverItem {
             background-color: lightgray;

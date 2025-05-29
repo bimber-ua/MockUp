@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--
- * Copyright (c) 2024 ad 
+ * Copyright (c) 2024 A.Dinkajew 
  * Alle Rechte vorbehalten.
  -->
 
@@ -57,6 +57,10 @@
                 class="button-style">
                 Items to be assigned
             </button>
+            <br><br>
+            Overview: <br><br>
+            <button id="viewReadyItemsButton" data-id="ViewReadyItems" onclick="saveButtonId(this.dataset.id); navigateToScreen('jobcards')" class="button-style">View <b>Ready</b> Items
+            </button>
         </div>
 
         <div id="progress-jobcards" class="screen" data-name="Progress">
@@ -67,7 +71,7 @@
                 class="button-style">To
                 Do</button>
             <button data-id="Next"
-                onclick="saveButtonId(this.dataset.id); saveButtonId(this.dataset.id); navigateToScreen('jobcards')"
+                onclick="saveButtonId(this.dataset.id); navigateToScreen('jobcards')"
                 class="button-style">Next</button>
             <button data-id="InProgress" onclick="saveButtonId(this.dataset.id); navigateToScreen('jobcards')"
                 class="button-style">In
@@ -488,7 +492,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 PW, AD. Alle Rechte vorbehalten.</p>
+        <p>&copy; 2024 P.Wolff, A.Dinkajew. Alle Rechte vorbehalten.</p>
     </footer>
 
     <!-- Hier werden alle zusätliche Elemente für DOM generiert und interne Logik aufgerufen  -->
